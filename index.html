@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloSquared | Creative Asset Portfolio</title>
+    <title>SoloSquared | Character & Asset Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,9 +13,9 @@
                     colors: {
                         brand: {
                             bg: '#05070c',      /* Pitch dark matte background */
-                            card: '#0c101b',    /* Ultra-sleek card container */
+                            card: '#0c101b',    /* Sleek card container */
                             accent: '#10b981',  /* Emerald green accent tint */
-                            highlight: '#06b6d4' /* Technical cyan high-contrast tint */
+                            highlight: '#06b6d4' /* Technical cyan contrast tint */
                         }
                     },
                     fontFamily: {
@@ -25,7 +25,7 @@
             }
         }
     </script>
-    <!-- Google Fonts & Icons -->
+    <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -35,7 +35,7 @@
             background-color: #05070c;
             color: #f3f4f6;
         }
-        /* Elegant professional scrollbar configuration */
+        /* Custom professional scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -53,18 +53,18 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-accent selection:text-brand-bg">
 
-    <!-- Ambient background light leak -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[450px] bg-gradient-to-b from-brand-accent/5 via-transparent to-transparent pointer-events-none rounded-full blur-[100px]"></div>
+    <!-- Subtle atmospheric background ambient light -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-gradient-to-b from-brand-accent/5 via-transparent to-transparent pointer-events-none rounded-full blur-[100px]"></div>
 
-    <!-- Minimalist Professional Header -->
-    <header class="border-b border-white/5 bg-brand-bg/80 backdrop-blur-md sticky top-0 z-40">
+    <!-- Minimalist Business Header -->
+    <header class="border-b border-white/5 bg-brand-bg/85 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 flex items-center justify-center bg-gradient-to-tr from-brand-accent to-brand-highlight rounded-lg text-white font-extrabold text-lg tracking-tighter shadow-lg shadow-brand-accent/10">
                     S²
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-white font-black text-base tracking-wider leading-none">SOLOSQUARED</span>
+                    <span class="text-white font-black text-sm tracking-wider leading-none">SOLOSQUARED</span>
                     <span class="text-[9px] text-brand-highlight font-bold tracking-widest uppercase mt-1">Digital Animation Studio</span>
                 </div>
             </div>
@@ -74,53 +74,42 @@
         </div>
     </header>
 
-    <!-- Studio Profile Section -->
+    <!-- Studio Profile Overview -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-6 py-16">
         <div class="max-w-3xl mb-16">
             <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
                 Character & Asset <span class="bg-gradient-to-r from-brand-accent to-brand-highlight bg-clip-text text-transparent">IP Portfolio</span>
             </h1>
             <p class="text-gray-400 text-sm md:text-base leading-relaxed font-light">
-                SoloSquared is a cloud-native digital animation studio that leverages an on-demand, virtual GPU infrastructure to produce high-fidelity 3D content and distinct, high-engagement character intellectual property (IP). By utilizing a pay-as-you-go decentralized computing model, the studio completely insulates startup capital from hardware depreciation and eliminates fixed facility overhead.
+                SoloSquared is a cloud-native digital animation studio that leverages an on-demand, virtual GPU infrastructure to produce high-fidelity 3D content and distinct, high-engagement character intellectual property (IP). By utilizing a pay-as-you-go decentralized computing model, the studio completely insulates startup capital from hardware depreciation and eliminates fixed facility overhead. This lean operational structure allows SoloSquared to rapidly scale commercial asset production to capture immediate monetization pathways within the high-growth short-form video and digital media markets.
             </p>
         </div>
 
-        <!-- Dynamic Studio Pipeline Gallery Grid -->
+        <!-- Section Info Header -->
         <div class="flex items-center justify-between mb-8 border-b border-white/5 pb-4">
-            <h2 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <h2 class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
                 Asset Directory (<span id="total-count" class="text-brand-accent">0</span>)
             </h2>
-            <div id="status-text" class="text-xs text-gray-500 font-medium">
-                Loading assets...
+            <div class="text-xs text-gray-500 font-medium uppercase tracking-wider">
+                Production-Ready Designs
             </div>
         </div>
 
-        <!-- Asset Cards Grid -->
+        <!-- Clean Image Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="portfolio-grid">
-            <!-- Rendered dynamically by Javascript -->
-        </div>
-
-        <!-- Beautiful Fallback UI (only visible if loading fails entirely) -->
-        <div id="fallback-ui" class="hidden py-24 text-center border border-dashed border-white/5 rounded-3xl">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center text-gray-500 text-lg">
-                <i class="fa-solid fa-folder-open"></i>
-            </div>
-            <h3 class="text-white font-bold text-sm">Offline Pipeline View</h3>
-            <p class="text-gray-500 text-xs mt-1 max-w-sm mx-auto">
-                Please configure your asset directory hosting configuration variables in the code.
-            </p>
+            <!-- Dynamic Assets will load here -->
         </div>
     </main>
 
-    <!-- Professional Interactive Lightbox Viewer -->
+    <!-- Professional Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-50 hidden bg-brand-bg/95 flex items-center justify-center p-6 backdrop-blur-md">
-        <!-- Close overlay trigger -->
+        <!-- Close Button -->
         <button onclick="hideLightbox()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-sm transition-all focus:outline-none">
             <i class="fa-solid fa-xmark"></i>
         </button>
 
-        <!-- Navigation Buttons -->
+        <!-- Gallery Navigators -->
         <button onclick="navigateLightbox(-1)" class="absolute left-6 w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center text-sm transition-all focus:outline-none">
             <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -128,14 +117,14 @@
             <i class="fa-solid fa-chevron-right"></i>
         </button>
 
-        <!-- Viewer Pane -->
+        <!-- Media Panel -->
         <div class="max-w-4xl w-full flex flex-col md:flex-row bg-brand-card border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
-            <!-- Left Side: Interactive Graphic Panel -->
+            <!-- Showcase Image -->
             <div class="w-full md:w-3/5 bg-black/20 flex items-center justify-center p-6 min-h-[300px] md:min-h-[480px]">
                 <img id="lightbox-img" src="" alt="Portfolio Image" class="max-h-[70vh] w-auto max-w-full rounded-lg object-contain">
             </div>
 
-            <!-- Right Side: Minimal Metadata panel -->
+            <!-- Metadata Panel -->
             <div class="w-full md:w-2/5 p-8 flex flex-col justify-between bg-brand-card/50 border-t md:border-t-0 md:border-l border-white/5">
                 <div class="space-y-4">
                     <span class="px-2 py-1 rounded bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-[9px] font-bold tracking-widest uppercase">
@@ -143,21 +132,21 @@
                     </span>
                     <h3 class="text-lg font-bold text-white leading-tight mt-2" id="lightbox-title">Asset Title</h3>
                     <p class="text-gray-400 text-xs leading-relaxed" id="lightbox-desc">
-                        Production design asset loaded from the SoloSquared Google Drive registry.
+                        Production design asset loaded from the SoloSquared cloud registry.
                     </p>
                 </div>
 
                 <div class="pt-6 border-t border-white/5">
                     <button onclick="copyShareUrl()" class="w-full px-4 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i>
-                        Copy Link
+                        Copy Image Link
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Minimalistic Clean Footer -->
+    <!-- Minimal Studio Footer -->
     <footer class="py-10 border-t border-white/5 bg-brand-bg">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
             <div class="flex items-center gap-2">
@@ -168,31 +157,17 @@
         </div>
     </footer>
 
-    <!-- JavaScript Core Execution Engine -->
+    <!-- JavaScript Automation Core -->
     <script>
-        
-        // ==========================================
-        //  PORTABLE CONFIGURATION OPTIONS
-        // ==========================================
-        
-        // METHOD 1: GitHub Native API (Highly Recommended)
-        // Set this to true to read images straight from your GitHub Pages folder!
-        const USE_GITHUB_HOSTING = true;
-        const GITHUB_USERNAME = "solosquared";
-        const GITHUB_REPO = "solosquared.github.io"; 
-        const GITHUB_FOLDER_PATH = "SoloSquared_Portfolio";
+        // Set GitHub credentials matching your repo exactly
+        const GITHUB_OWNER = 'SoloSquared';
+        const GITHUB_REPO = 'SoloSquared.github.io';
+        const GITHUB_FOLDER = 'SoloSquared_Portfolio';
 
-        // METHOD 2: Silent Google Drive Deployment
-        // If you still want to run off Google Drive, paste your Google Apps Script URL here.
-        // It runs silently in the background with absolutely NO visible setup panels!
-        const SILENT_GOOGLE_DRIVE_URL = ""; 
-
-        // ==========================================
-        
         let assetList = [];
         let currentItemIndex = 0;
 
-        // Clean file identifiers into elegant business titles
+        // Clean file names to elegant text titles
         function parseCleanTitle(filename) {
             let base = filename.substring(0, filename.lastIndexOf('.')) || filename;
             base = base.replace(/[-_]/g, ' ').replace(/\s+/g, ' ');
@@ -201,81 +176,77 @@
             });
         }
 
-        // Generate the asset links cleanly
-        function makeAssetLink(item) {
-            if (item.download_url) {
-                return item.download_url; // Use GitHub direct link
-            }
-            // Fallback: Google Drive hotlink
-            return `https://lh3.googleusercontent.com/d/${item.id}`;
+        // Build path pointing directly to your uploaded folder
+        function makeAssetLink(filename) {
+            return `SoloSquared_Portfolio/${filename}`;
         }
 
-        async function fetchPortfolioDirectory() {
-            const statusText = document.getElementById("status-text");
-
+        // 1. Primary: Try to load all files dynamically using public GitHub API
+        async function fetchAssetsFromGitHub() {
             try {
-                // If using high-speed GitHub API
-                if (USE_GITHUB_HOSTING) {
-                    const apiUrl = `https://api.github.io/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FOLDER_PATH}`;
-                    const response = await fetch(apiUrl);
-                    if (!response.ok) throw new Error("GitHub folder not found or repository is private.");
-                    
-                    const files = await response.json();
-                    
-                    // Filter to only load image extensions
-                    assetList = files.filter(f => f.name.match(/\.(png|jpe?g|webp)$/i));
-                    statusText.innerText = "Assets updated via GitHub CDN";
-                    renderGrid();
-                    return;
+                const response = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}`);
+                if (!response.ok) throw new Error("API limits exceeded or Folder not found");
+                
+                const data = await response.json();
+                
+                // Keep only valid image formats (.png, .jpg, .webp)
+                const images = data
+                    .filter(file => file.type === 'file' && file.name.match(/\.(png|jpe?g|webp)$/i))
+                    .map(file => file.name);
+
+                if (images.length > 0) {
+                    console.log(`Loaded ${images.length} assets dynamically from GitHub API.`);
+                    return images;
                 }
-
-                // Otherwise, silent Google Drive API
-                if (SILENT_GOOGLE_DRIVE_URL) {
-                    const response = await fetch(SILENT_GOOGLE_DRIVE_URL);
-                    const data = await response.json();
-                    if (Array.isArray(data) && data.length > 0) {
-                        assetList = data;
-                        statusText.innerText = "Synced with Google Drive Cloud";
-                        renderGrid();
-                        return;
-                    }
-                }
-
-                // Load beautiful pre-baked demo cards if no custom endpoints are set yet
-                loadDemoPipeline();
-
-            } catch (err) {
-                console.warn("Dynamic loading fallback triggered:", err);
-                loadDemoPipeline();
+            } catch (error) {
+                console.warn("GitHub API fetch fallback triggered:", error.message);
             }
+            return null;
         }
 
-        function renderGrid() {
+        // 2. Secondary: If offline or rate-limited, load fallback list programmatically (with corrected "a-a-" double-spelling)
+        function generateFallbackAssets() {
+            const fallback = [];
+            
+            // First file (typically without the sequential identifier suffix)
+            fallback.push("black-and-white-simple-image-of-a-a-cute-monster.png");
+            
+            // Generate the sequential list for remaining 148 files
+            for (let i = 2; i <= 149; i++) {
+                fallback.push(`black-and-white-simple-image-of-a-a-cute-monster-${i}.png`);
+            }
+            return fallback;
+        }
+
+        // Initialize and render the portfolio grid
+        async function initGallery() {
             const grid = document.getElementById("portfolio-grid");
-            const fallback = document.getElementById("fallback-ui");
             grid.innerHTML = "";
 
-            if (assetList.length === 0) {
-                fallback.classList.remove("hidden");
-                return;
+            // Try dynamic fetch first, fall back if API is unavailable
+            let fetchedList = await fetchAssetsFromGitHub();
+            if (fetchedList) {
+                assetList = fetchedList;
+            } else {
+                assetList = generateFallbackAssets();
             }
-            fallback.classList.add("hidden");
 
-            assetList.forEach((item, idx) => {
+            assetList.forEach((filename, idx) => {
                 const card = document.createElement("div");
                 card.className = "group relative rounded-2xl bg-brand-card border border-white/5 overflow-hidden hover:border-brand-accent/20 transition-all duration-300 cursor-pointer shadow-lg";
                 card.setAttribute("onclick", `openLightbox(${idx})`);
 
-                const title = parseCleanTitle(item.name);
-                const url = makeAssetLink(item);
+                const title = parseCleanTitle(filename);
+                const url = makeAssetLink(filename);
 
                 card.innerHTML = `
                     <div class="relative aspect-square w-full bg-black/30 overflow-hidden">
-                        <img src="${url}" alt="${title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageLoadError(this, '${item.name}')">
+                        <img src="${url}" alt="${title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="handleImageError(this)">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent opacity-40"></div>
                     </div>
                     <div class="p-5">
                         <h4 class="text-white font-semibold text-xs tracking-wider uppercase truncate group-hover:text-brand-accent transition-colors">${title}</h4>
+                        <p class="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Asset ID: ${idx + 1}</p>
                     </div>
                 `;
                 grid.appendChild(card);
@@ -284,27 +255,23 @@
             document.getElementById("total-count").innerText = assetList.length;
         }
 
-        // Handle offline placeholders beautifully
-        function handleImageLoadError(img, name) {
+        // Fallback placeholder image in case of broken files
+        function handleImageError(img) {
             img.onerror = null;
-            img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" fill="%230c101b"><rect width="100%" height="100%" fill="%230c101b" stroke="%2310b981" stroke-width="1"/><text x="50%" y="45%" fill="%23ffffff" font-family="Arial" font-weight="bold" font-size="11" dominant-baseline="middle" text-anchor="middle">${parseCleanTitle(name)}</text><text x="50%" y="55%" fill="%2306b6d4" font-family="Arial" font-size="8" font-weight="bold" dominant-baseline="middle" text-anchor="middle">Dynamic Asset Pipeline Active</text></svg>`;
+            img.src = `https://placehold.co/600x600/0c101b/10b981?text=Asset+Loading`;
         }
 
+        // Lightbox Interactive controls
         function openLightbox(idx) {
             currentItemIndex = idx;
-            const item = assetList[currentItemIndex];
+            const filename = assetList[currentItemIndex];
             
-            const title = parseCleanTitle(item.name);
-            const url = makeAssetLink(item);
+            const title = parseCleanTitle(filename);
+            const url = makeAssetLink(filename);
 
-            const modalImg = document.getElementById("lightbox-img");
-            modalImg.onerror = function() {
-                handleImageLoadError(modalImg, item.name);
-            };
-            modalImg.src = url;
-
+            document.getElementById("lightbox-img").src = url;
             document.getElementById("lightbox-title").innerText = title;
-            document.getElementById("lightbox-desc").innerText = `High-fidelity IP Character design asset. Active file name: [ ${item.name} ].`;
+            document.getElementById("lightbox-desc").innerText = `High-fidelity IP Character design asset. Clean filename: [ ${filename} ]. Ready for cloud production distribution.`;
             
             document.getElementById("lightbox").classList.remove("hidden");
             document.body.style.overflow = "hidden";
@@ -322,40 +289,38 @@
             openLightbox(currentItemIndex);
         }
 
-        // High-security frame clipboard utility
+        // Interactive Copy Link function
         function copyShareUrl() {
-            const item = assetList[currentItemIndex];
-            const url = makeAssetLink(item);
+            const filename = assetList[currentItemIndex];
+            const url = window.location.origin + "/" + makeAssetLink(filename);
 
-            const helperTextarea = document.createElement("textarea");
-            helperTextarea.value = url;
-            document.body.appendChild(helperTextarea);
-            helperTextarea.select();
+            const tempInput = document.createElement("textarea");
+            tempInput.value = url;
+            document.body.appendChild(tempInput);
+            tempInput.select();
             document.execCommand("copy");
-            document.body.removeChild(helperTextarea);
+            document.body.removeChild(tempInput);
 
+            // Toast feedback message
             const toast = document.createElement("div");
             toast.className = "fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-xl bg-brand-accent text-white font-bold text-xs tracking-wider uppercase shadow-xl animate-bounce";
-            toast.innerText = "ASSET LINK COPIED!";
+            toast.innerText = "COPIED IMAGE URL!";
             document.body.appendChild(toast);
             setTimeout(() => toast.remove(), 2500);
         }
 
-        // Showcase-ready fallbacks to present visual structure before user files exist on GitHub
-        function loadDemoPipeline() {
-            document.getElementById("status-text").innerText = "Displaying Pipeline Demo Layout";
-            assetList = [
-                { name: "black_and_white_simple_image_of_a_cute_monster_1.png", id: "demo1" },
-                { name: "cyberpunk_mechanical_robotic_concept_2.png", id: "demo2" },
-                { name: "glowing_neon_cityscape_environment_landscape_3.png", id: "demo3" },
-                { name: "black_and_white_simple_image_of_a_cute_monster_4.png", id: "demo4" },
-                { name: "concept_scout_creature_character_design_5.png", id: "demo5" },
-                { name: "simple_landscape_rendering_6.png", id: "demo6" }
-            ];
-            renderGrid();
-        }
+        // Listen for keyboard arrow keys inside Lightbox
+        window.addEventListener("keydown", (e) => {
+            const lightbox = document.getElementById("lightbox");
+            if (!lightbox.classList.contains("hidden")) {
+                if (e.key === "ArrowRight") navigateLightbox(1);
+                if (e.key === "ArrowLeft") navigateLightbox(-1);
+                if (e.key === "Escape") hideLightbox();
+            }
+        });
 
-        window.addEventListener("DOMContentLoaded", fetchPortfolioDirectory);
+        // Initialize gallery on load
+        window.addEventListener("DOMContentLoaded", initGallery);
     </script>
 </body>
 </html>
